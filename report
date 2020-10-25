@@ -1,0 +1,22 @@
+# Geltain-test
+
+```
+x,y,z             =>            { 
+a,b,c                               "lines": [
+                                     {
+                                        "column": [
+                                            { "#text": "x"},
+                                            { "#text": "y"},
+                                            { "#text": "z"}
+                                        ]
+                                      },
+                                      {
+                                        "column": [
+                                            { "#text": "a"},
+                                            { "#text": "b"},
+                                            { "#text": "c"}
+                                        ]
+                                      }
+                                    ]
+                                 }
+```
