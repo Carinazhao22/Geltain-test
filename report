@@ -1,22 +1,97 @@
 # Geltain-test
 
 ```
-x,y,z             =>            { 
-a,b,c                               "lines": [
-                                     {
-                                        "column": [
-                                            { "#text": "x"},
-                                            { "#text": "y"},
-                                            { "#text": "z"}
-                                        ]
-                                      },
-                                      {
-                                        "column": [
-                                            { "#text": "a"},
-                                            { "#text": "b"},
-                                            { "#text": "c"}
-                                        ]
-                                      }
-                                    ]
-                                 }
+x,y,z                                        =>                                 { 
+a,b,c                                                                               "line": [
+                                                                                       {
+                                                                                          "column": [
+                                                                                              { "#text": "x"},
+                                                                                              { "#text": "y"},
+                                                                                              { "#text": "z"}
+                                                                                          ]
+                                                                                       },
+                                                                                       {
+                                                                                          "column": [
+                                                                                              { "#text": "a"},
+                                                                                              { "#text": "b"},
+                                                                                              { "#text": "c"}
+                                                                                          ]
+                                                                                       }
+                                                                                    ]
+                                                                                 }
 ```
+
+```
+this is a new line                           =>                                {
+"something else"                                                                  "line": [
+                                                                                      { "#text": "this is a new line"},
+                                                                                      { "#text": "\"something else"\"}
+                                                                                   ]
+                                                                               }
+```
+
+```
+                                             =>                                {
+                                                                                  "line": [
+                                                                                       {}
+                                                                                  ]
+                                                                               }
+```
+
+```
+User                                         =>                                {
+----                                                                              "user": [
+Name: John, Lastname: Doe                                                             { "@firstname": "John",
+Office: 1st Ave                                                                         "@lastname": "Doe",
+Birth date: 1978-01-01                                                                  "office": { "#text": "1st Ave"},
+                                                                                        "birth-date": { "#text": "1978-01-01"}
+                                                                                      }
+                                                                                  ]
+                                                                               }
+```
+
+```
+-------------
+woche: 1                                     =>                                {
+Mo04Jan10                                                                         "week": [
+Do07Jan10 Run                                                                        { "@number": "1",
+          Strecke: Unterführung                                                        "day": [
+          Kommentar: LS3AsicsTrabuco, 5mm Neuschnee, rutschig                             { "weekday": { "#text": "Mo"},
+          Zeit: 15:34(15:34),31:20(15.45),                                                  "date": { "#text": "04Jan10"}
+          Swim                                                                            },
+          Ort: Hallenbad Markgröningen                                                    { "weekday": { "#text": "Do"},
+          Laenge: 400 ES                                                                    "date": { "#text": "07Jan10"},
+          Laenge: 100 AS                                                                    "unit": [
+                                                                                               { "discipline": { "#text": "Run"},
+                                                                                                 "route": { "#text": "Unterführung"},
+                                                                                                 "comment": { "#text": "LS3AsicsTrabuco, 5mm Neuschnee, rutschig"},
+                                                                                                 "time": { "#text": "15:34(15:34),31:20(15.45),"}
+                                                                                               },
+                                                                                               { "discipline": { "#text": "Swim"},
+                                                                                                 "place": { "#text": "Hallenbad Markgröningen"},
+                                                                                                 "distance": [
+                                                                                                     { "#text": "400 ES"},
+                                                                                                     { "#text": "100 AS"}
+                                                                                                 ]
+                                                                                               }
+                                                                                             ]
+                                                                                          }
+                                                                                       ]
+                                                                                    }
+                                                                                 ]
+                                                                              }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
